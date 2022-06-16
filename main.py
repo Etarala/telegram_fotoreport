@@ -3,6 +3,7 @@ import os
 import datetime
 import config
 from telebot import types
+import locale
 
 token = config.API_BOT_TOKEN
 bot = telebot.TeleBot(token)
@@ -11,8 +12,10 @@ current_azs = 0
 
 @bot.message_handler(commands=['start'])
 def button_message(message):
-    dt_now = datetime.datetime.now()
-    bot.send_message(message.chat.id, text=dt_now)
+    locale.setlocale(locale.LC_TIME, 'ru')
+    dt_obj = datetime.datetime.now()
+    dt_string = dt_obj.strftime("%d-%b")
+    bot.send_message(message.chat.id, text=dt_string)
     # Проверяем наличие целевой папки с фото
     if not os.path.isdir("C:/Users/spk-ws011/Desktop/foto/photos/1"):
         os.mkdir('C:/Users/spk-ws011/Desktop/foto/photos/1')
