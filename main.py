@@ -76,107 +76,107 @@ def func(message):
         current_azs = 3
 
     elif message.text == "АЗС 4":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 4:")
         current_azs = 4
 
     elif message.text == "АЗС 5":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 5:")
         current_azs = 5
 
     elif message.text == "АЗС 7":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 7:")
         current_azs = 7
 
     elif message.text == "АЗС 9":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 9:")
         current_azs = 9
 
     elif message.text == "АЗС 10":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 10:")
         current_azs = 10
 
     elif message.text == "АЗС 11":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 11:")
         current_azs = 11
 
     elif message.text == "АЗС 15":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 15:")
         current_azs = 15
 
     elif message.text == "АЗС 17":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 17:")
         current_azs = 17
 
     elif message.text == "АЗС 19":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 19:")
         current_azs = 19
 
     elif message.text == "АЗС 21":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 21:")
         current_azs = 21
 
     elif message.text == "АЗС 22":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 22:")
         current_azs = 22
 
     elif message.text == "АЗС 23":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 23:")
         current_azs = 23
 
     elif message.text == "АЗС 24":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 24:")
         current_azs = 24
 
     elif message.text == "АЗС 25":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 25:")
         current_azs = 25
 
     elif message.text == "АЗС 26":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 26:")
         current_azs = 26
 
     elif message.text == "АЗС 27":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 27:")
         current_azs = 27
 
     elif message.text == "АЗС 28":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 28:")
         current_azs = 28
 
     elif message.text == "АЗС 30":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 30:")
         current_azs = 30
 
     elif message.text == "АЗС 31":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 31:")
         current_azs = 31
 
     elif message.text == "АЗС 32":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 32:")
         current_azs = 32
 
     elif message.text == "АЗС 33":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 33:")
         current_azs = 33
 
     elif message.text == "АЗС 35":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 35:")
         current_azs = 35
 
     elif message.text == "АЗС 36":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 36:")
         current_azs = 36
 
     elif message.text == "АЗС 37":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 37:")
         current_azs = 37
 
     elif message.text == "АЗС 38":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 38:")
         current_azs = 38
 
     elif message.text == "АЗС 39":
-        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 39:")
         current_azs = 39
 
 
