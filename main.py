@@ -16,7 +16,7 @@ dt_string = dt_obj.strftime("%d-%b")
 @bot.message_handler(commands=['start'])
 def button_message(message):
     bot.send_message(message.chat.id, text=dt_string)
-    # Проверяем наличие целевой папки с фото  создем при отсутствии
+    # Проверяем наличие целевой папки и создаем при отсутствии
     if not os.path.isdir('C:/Users/spk-ws011/Desktop/foto/photos/'+dt_string):
         os.mkdir('C:/Users/spk-ws011/Desktop/foto/photos/'+dt_string)
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
