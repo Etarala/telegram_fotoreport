@@ -9,16 +9,16 @@ token = config.API_BOT_TOKEN
 bot = telebot.TeleBot(token)
 current_azs = 0
 
+locale.setlocale(locale.LC_TIME, 'ru')
+dt_obj = datetime.datetime.now()
+dt_string = dt_obj.strftime("%d-%b")
 
 @bot.message_handler(commands=['start'])
 def button_message(message):
-    locale.setlocale(locale.LC_TIME, 'ru')
-    dt_obj = datetime.datetime.now()
-    dt_string = dt_obj.strftime("%d-%b")
     bot.send_message(message.chat.id, text=dt_string)
-    # Проверяем наличие целевой папки с фото
-    if not os.path.isdir("C:/Users/spk-ws011/Desktop/foto/photos/1"):
-        os.mkdir('C:/Users/spk-ws011/Desktop/foto/photos/1')
+    # Проверяем наличие целевой папки с фото  создем при отсутствии
+    if not os.path.isdir('C:/Users/spk-ws011/Desktop/foto/photos/'+dt_string):
+        os.mkdir('C:/Users/spk-ws011/Desktop/foto/photos/'+dt_string)
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("АЗС 1")
     item2 = types.KeyboardButton("АЗС 3")
