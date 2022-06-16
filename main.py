@@ -10,15 +10,25 @@ bot = telebot.TeleBot(token)
 current_azs = 0
 
 locale.setlocale(locale.LC_TIME, 'ru')
-dt_obj = datetime.datetime.now()
-dt_string = dt_obj.strftime("%d-%b")
+
+
+def get_upload_folder_path() -> str:
+    dt_obj = datetime.datetime.now()
+    dt_string = dt_obj.strftime("%d-%b")
+    return 'C:/Users/spk-ws011/Desktop/foto/photos/' + dt_string
+
+
+def convert_file_path(file_path: str) -> str:
+    global current_azs
+    file_name = 'АЗС_' + str(current_azs) + '_' + file_path.split('/')[1]
+
+    print(file_name)
+
+    return os.path.join(get_upload_folder_path(), file_name)
+
 
 @bot.message_handler(commands=['start'])
 def button_message(message):
-    bot.send_message(message.chat.id, text=dt_string)
-    # Проверяем наличие целевой папки и создаем при отсутствии
-    if not os.path.isdir('C:/Users/spk-ws011/Desktop/foto/photos/'+dt_string):
-        os.mkdir('C:/Users/spk-ws011/Desktop/foto/photos/'+dt_string)
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("АЗС 1")
     item2 = types.KeyboardButton("АЗС 3")
@@ -56,6 +66,7 @@ def button_message(message):
 
 @bot.message_handler(content_types=['text'])
 def func(message):
+    global current_azs
     if message.text == "АЗС 1":
         bot.send_message(message.chat.id, text="Загрузите фото АЗС 1:")
         current_azs = 1
@@ -64,13 +75,119 @@ def func(message):
         bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
         current_azs = 3
 
+    elif message.text == "АЗС 4":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 4
+
+    elif message.text == "АЗС 5":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 5
+
+    elif message.text == "АЗС 7":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 7
+
+    elif message.text == "АЗС 9":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 9
+
+    elif message.text == "АЗС 10":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 10
+
+    elif message.text == "АЗС 11":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 11
+
+    elif message.text == "АЗС 15":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 15
+
+    elif message.text == "АЗС 17":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 17
+
+    elif message.text == "АЗС 19":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 19
+
+    elif message.text == "АЗС 21":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 21
+
+    elif message.text == "АЗС 22":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 22
+
+    elif message.text == "АЗС 23":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 23
+
+    elif message.text == "АЗС 24":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 24
+
+    elif message.text == "АЗС 25":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 25
+
+    elif message.text == "АЗС 26":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 26
+
+    elif message.text == "АЗС 27":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 27
+
+    elif message.text == "АЗС 28":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 28
+
+    elif message.text == "АЗС 30":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 30
+
+    elif message.text == "АЗС 31":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 31
+
+    elif message.text == "АЗС 32":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 32
+
+    elif message.text == "АЗС 33":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 33
+
+    elif message.text == "АЗС 35":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 35
+
+    elif message.text == "АЗС 36":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 36
+
+    elif message.text == "АЗС 37":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 37
+
+    elif message.text == "АЗС 38":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 38
+
+    elif message.text == "АЗС 39":
+        bot.send_message(message.chat.id, text="Загрузите фото АЗС 3:")
+        current_azs = 39
+
 
 @bot.message_handler(content_types=["photo"])
 def photo(message):
+    if not os.path.isdir(get_upload_folder_path()):
+        os.makedirs(get_upload_folder_path(), exist_ok=True)
+
     file_info = bot.get_file(message.photo[len(message.photo) - 1].file_id)
     downloaded_file = bot.download_file(file_info.file_path)
-    src = "C:/Users/spk-ws011/Desktop/foto/" + file_info.file_path
-    with open(src, "wb") as new_file:
+    with open(convert_file_path(file_info.file_path), "wb") as new_file:
         new_file.write(downloaded_file)
     # bot.reply_to(message, "Фото получены, выберете следующую АЗС")
 
