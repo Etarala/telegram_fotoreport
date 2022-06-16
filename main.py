@@ -9,6 +9,7 @@ import re
 token = config.API_BOT_TOKEN
 bot = telebot.TeleBot(token)
 current_azs = 0
+users={}
 
 locale.setlocale(locale.LC_TIME, 'ru')
 
@@ -19,9 +20,9 @@ def get_upload_folder_path() -> str:
     return config.FOLDER_PATH + dt_string
 
 
-def convert_file_path(file_path: str) -> str:
-    global current_azs
-    file_name = 'АЗС_' + str(current_azs) + '_' + file_path.split('/')[1]
+def convert_file_path(file_path: str, message) -> str:
+    global users
+    file_name = 'АЗС_' + str(users[message.from_user.id]) + '_' + file_path.split('/')[1]
 
     print(file_name)
 
@@ -42,12 +43,14 @@ def button_message(message):
 
 @bot.message_handler(regexp='^АЗС\s\d+$')
 def func(message):
-    global current_azs
+    global users
 
     matches = re.search('^АЗС\s(\d+)+$', message.text)
     if message.text in get_azs_list():
         bot.send_message(message.chat.id, text="Загрузите фото " + matches[0] + ':')
-        current_azs = matches[1]
+        users[message.from_user.id] = int(matches[1])
+
+    print(users)
 
 
 @bot.message_handler(content_types=["photo"])
@@ -57,7 +60,7 @@ def photo(message):
 
     file_info = bot.get_file(message.photo[len(message.photo) - 1].file_id)
     downloaded_file = bot.download_file(file_info.file_path)
-    with open(convert_file_path(file_info.file_path), "wb") as new_file:
+    with open(convert_file_path(file_info.file_path, message), "wb") as new_file:
         new_file.write(downloaded_file)
     #bot.reply_to(message, "Фото получены, выберете следующую АЗС")
 
