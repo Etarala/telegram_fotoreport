@@ -1,9 +1,10 @@
 import telebot
 import os
 import datetime
+import config
 from telebot import types
 
-token = ''
+token = config.API_BOT_TOKEN
 bot = telebot.TeleBot(token)
 current_azs = 0
 
