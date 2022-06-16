@@ -15,7 +15,7 @@ locale.setlocale(locale.LC_TIME, 'ru')
 def get_upload_folder_path() -> str:
     dt_obj = datetime.datetime.now()
     dt_string = dt_obj.strftime("%d-%b")
-    return 'C:/Users/spk-ws011/Desktop/foto/photos/' + dt_string
+    return config.FOLDER_PATH + dt_string
 
 
 def convert_file_path(file_path: str) -> str:
