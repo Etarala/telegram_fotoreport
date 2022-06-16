@@ -3,7 +3,7 @@ import os
 import datetime
 from telebot import types
 
-token = '2003006889:AAES1Zx2oquG70aBN3XR254iyzUSHHJsnD0'
+token = ''
 bot = telebot.TeleBot(token)
 current_azs = 0
 
