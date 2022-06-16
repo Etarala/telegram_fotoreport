@@ -17,7 +17,7 @@ locale.setlocale(locale.LC_TIME, 'ru')
 def get_upload_folder_path() -> str:
     dt_obj = datetime.datetime.now()
     dt_string = dt_obj.strftime("%d-%b")
-    return config.FOLDER_PATH + dt_string
+    return os.path.join(config.FOLDER_PATH, str(dt_obj.year), dt_obj.strftime("%b"), dt_obj.strftime("%d-%b"))
 
 
 def convert_file_path(file_path: str, message) -> str:
