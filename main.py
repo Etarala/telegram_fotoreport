@@ -9,7 +9,7 @@ import re
 token = config.API_BOT_TOKEN
 bot = telebot.TeleBot(token)
 current_azs = 0
-users={}
+users = {}
 
 locale.setlocale(locale.LC_TIME, 'ru')
 
@@ -33,6 +33,7 @@ def get_azs_list():
     return list(
         map(lambda x: "АЗС " + str(x), config.AZS_LIST)
     )
+
 
 @bot.message_handler(commands=['start'])
 def button_message(message):
@@ -62,7 +63,7 @@ def photo(message):
     downloaded_file = bot.download_file(file_info.file_path)
     with open(convert_file_path(file_info.file_path, message), "wb") as new_file:
         new_file.write(downloaded_file)
-    #bot.reply_to(message, "Фото получены, выберете следующую АЗС")
+    # bot.reply_to(message, "Фото получены, выберете следующую АЗС")
 
 
 bot.polling(none_stop=True, interval=0)
