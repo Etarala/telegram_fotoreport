@@ -2,3 +2,4 @@
 config.py
 /.idea/
 /venv/
+__pycache__/config.cpython-39.pyc
