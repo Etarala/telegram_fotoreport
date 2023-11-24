@@ -11,7 +11,7 @@ bot = telebot.TeleBot(token)
 current_azs = 0
 users = {}
 
-locale.setlocale(locale.LC_TIME, 'ru')
+locale.setlocale(locale.LC_ALL, ('RU','UTF8'))
 
 
 def get_upload_folder_path() -> str:
